@@ -1,83 +1,74 @@
-🎶 PinkSync Music Visualizer
+🎶 # 🎶 PinkSync Music Visualizer
 
-Feel the Beat. See the Sound. Experience Music Differently.
+[![GitHub Stars](https://img.shields.io/github/stars/pinkycollie/PinkSync-Visualizer?style=for-the-badge)](https://github.com/pinkycollie/PinkSync-Visualizer/stargazers)
+[![Forks](https://img.shields.io/github/forks/pinkycollie/PinkSync-Visualizer?style=for-the-badge)](https://github.com/pinkycollie/PinkSync-Visualizer/network/members)
+[![Open Issues](https://img.shields.io/github/issues/pinkycollie/PinkSync-Visualizer?style=for-the-badge)](https://github.com/pinkycollie/PinkSync-Visualizer/issues)
+[![Top Language](https://img.shields.io/github/languages/top/pinkycollie/PinkSync-Visualizer?style=for-the-badge)](https://github.com/pinkycollie/PinkSync-Visualizer)
+[![License](https://img.shields.io/github/license/pinkycollie/PinkSync-Visualizer?style=for-the-badge)](https://github.com/pinkycollie/PinkSync-Visualizer/blob/main/LICENSE)
+[![Acquisition Ready](https://img.shields.io/badge/Acquisition--Ready-Yes-brightgreen?style=for-the-badge)]()
 
-The PinkSync Music Visualizer is a Deaf-First accessibility tool that transforms music and sound into vibrations, visuals, and emotional color mapping. Built for the MBTQ ecosystem, this visualizer bridges rhythm and emotion across sight, touch, and motion — making sound universally accessible.
+> Feel the beat. See the sound. Build inclusive, multisensory music experiences — engineered for scale and acquisition.
 
-✨ Features
+Animated demo / hero GIF: ![demo-placeholder](./assets/demo.gif)  <!-- Replace with your demo GIF or screenshot -->
 
-Upload or Stream Music → Drop an MP3 or connect to live audio.
+---
 
-Dynamic Visuals → Real-time particle animations powered by Three.js & Web Audio API.
+Why this repo matters
+- Deaf-first, accessibility-driven visualizer that transforms audio into visuals, haptics, and emotional color mapping.
+- Production-grade visual engine built on Three.js / WebGL and Web Audio APIs.
+- Designed for rapid enterprise adoption — modular, documented, and ready for due diligence.
 
-Accessibility Modes:
+Quick highlights
+- Real-time particle & shader-driven visuals
+- Emotion & frequency-aware color mapping
+- Mobile haptics + wearable-ready hooks
+- Sign-avatar overlay support for inclusive experiences
+- Browser-first: no install required (Next.js frontend)
 
-🔵 Color Emotion Mapping (bass = pulse, treble = spark).
+Table of contents
+- Features
+- Architecture
+- Quickstart
+- Environment & config
+- Deploy
+- Roadmap
+- Contributing & Code of Conduct
+- Security
+- License & Business / Acquisition
 
-🟣 Haptic Mode (phone vibration / wearable feedback).
+## 🚀 Features
+- Upload or stream audio (MP3 / live input)
+- High-fidelity visual engine: Three.js, p5.js, custom GLSL shaders
+- Advanced audio analysis: Web Audio API + Tone.js
+- Accessibility-first modes:
+  - Color Emotion Mapping (bass → pulse, treble → spark)
+  - Haptic Mode (phone vibration / wearable feedback)
+  - Sign Overlay Mode (syncs with signing avatars)
+- PinkSync API for palettes and haptic tuning
+- Extensible plugin system for new visual presets & device integrations
 
-🟢 Sign Overlay Mode (syncs with signing avatars).
+## 🏗 Architecture (high level)
+- Frontend: Next.js + React + Tailwind CSS
+- Visual Engine: Three.js / WebGL + p5.js for particle systems
+- Audio Pipeline: Web Audio API → FFT + feature extraction → visual mapping
+- Integration Layer: PinkSync API for personalization, presets, and analytics
+- Deployment: Vercel recommended for frontend; serverless or edge functions for API
 
-Browser-based MVP → No install required, just open and play.
+Add architecture diagram: ./docs/architecture.svg or ./docs/mbtq_architecture.html
 
-PinkSync API Integration → Custom color palettes, vibration intensity settings.
+## ⚡ Quickstart (local)
+1. Clone
+   git clone https://github.com/pinkycollie/PinkSync-Visualizer.git
+   cd PinkSync-Visualizer
 
-🛠️ Tech Stack
+2. Install
+   npm ci
 
-Frontend: Next.js, React, TailwindCSS
+3. Dev
+   npm run dev
 
-Visual Engine: Three.js / WebGL, p5.js
+4. Open
+   http://localhost:3000
 
-Audio Processing: Web Audio API, Tone.js
-
-Accessibility Layer: PinkSync API
-
-🚀 Getting Started
-1. Clone the Repo
-git clone https://github.com/pinksync/music-visualizer.git
-cd music-visualizer
-
-2. Install Dependencies
-npm install
-
-3. Run Dev Server
-npm run dev
-
-
-Visit http://localhost:3000 in your browser.
-
-🎨 Roadmap
-
- Audio Upload & Visualizer MVP
-
- Live Streaming Integration (YouTube / Spotify / Twitch)
-
- Haptic Feedback Device API (Apple Watch, wristbands, VR haptics)
-
- Multi-user Shared Experience (sync visuals in real-time across rooms)
-
- VR Mode (PinkSync x VR4Deaf immersive concerts)
-
-📦 Deployment
-
-Built for Vercel → One-click deploy to production.
-
-vercel deploy
-
-🤝 Community & Partnerships
-
-PinkSync Music Visualizer is part of the MBTQ.dev Deaf-First ecosystem, supporting accessibility-driven entrepreneurship and entertainment.
-
-Strategic integration partners:
-
-🎧 VR4Deaf (wearables + immersive store)
-
-🎥 Deaf creators & streamers (inclusive content)
-
-🎤 Vocational Rehab & Workforce Programs (event accessibility)
-
-📜 License
-
-MIT — Open-source under the MBTQ.dev initiative.
-
-⚡ PinkSync Music Visualizer — Powered by MBTQ.dev. Designed for the Deaf-first future.
+## 🔧 Environment (example)
+Create a .env.local at project root:
