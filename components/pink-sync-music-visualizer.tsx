@@ -28,7 +28,9 @@ const PinkSyncMusicVisualizer = () => {
   // Haptic feedback simulation
   const triggerHaptic = (strength: number) => {
     if ('vibrate' in navigator && mode === 'haptic') {
-      navigator.vibrate(strength * 20);
+      // Cap vibration duration to prevent discomfort
+      const duration = Math.min(strength * 20, 100);
+      navigator.vibrate(duration);
     }
   };
 
@@ -46,6 +48,10 @@ const PinkSyncMusicVisualizer = () => {
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file && file.type.startsWith('audio/')) {
+      // Revoke old URL before creating new one
+      if (audioFile) {
+        URL.revokeObjectURL(audioFile);
+      }
       const url = URL.createObjectURL(file);
       setAudioFile(url);
       if (audioRef.current) {
@@ -164,15 +170,16 @@ const PinkSyncMusicVisualizer = () => {
 
   // Cleanup on unmount
   useEffect(() => {
+    const currentAudioFile = audioFile;
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
-      if (audioFile) {
-        URL.revokeObjectURL(audioFile);
+      if (currentAudioFile) {
+        URL.revokeObjectURL(currentAudioFile);
       }
     };
-  }, [audioFile]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-900 to-indigo-900 text-white p-6">

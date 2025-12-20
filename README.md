@@ -33,22 +33,35 @@ Audio Processing: Web Audio API, Tone.js
 Accessibility Layer: PinkSync API
 
 🚀 Getting Started
+
+### Local Development
+
 1. Clone the Repo
-git clone https://github.com/pinksync/music-visualizer.git
-cd music-visualizer
+```bash
+git clone https://github.com/pinkycollie/PinkSync-Visualizer.git
+cd PinkSync-Visualizer
+```
 
 2. Install Dependencies
-npm install
+```bash
+npm install --legacy-peer-deps
+```
 
 3. Run Dev Server
+```bash
 npm run dev
-
+```
 
 Visit http://localhost:3000 in your browser.
 
+### Access the Visualizer
+
+- Local: http://localhost:3000/visualizer
+- GitHub Pages: https://pinkycollie.github.io/PinkSync-Visualizer/visualizer
+
 🎨 Roadmap
 
- Audio Upload & Visualizer MVP
+✅ Audio Upload & Visualizer MVP
 
  Live Streaming Integration (YouTube / Spotify / Twitch)
 
@@ -60,9 +73,26 @@ Visit http://localhost:3000 in your browser.
 
 📦 Deployment
 
-Built for Vercel → One-click deploy to production.
+### GitHub Pages (Automatic)
 
-vercel deploy
+This project is configured for automatic deployment to GitHub Pages. Every push to the `main` branch triggers a deployment workflow.
+
+To enable GitHub Pages:
+1. Go to your repository Settings
+2. Navigate to Pages section
+3. Under "Build and deployment", select "GitHub Actions" as the source
+4. The site will be deployed automatically
+
+The visualizer will be available at: `https://pinkycollie.github.io/PinkSync-Visualizer/visualizer`
+
+### Manual Build
+
+To build the static site manually:
+```bash
+npm run build
+```
+
+The static files will be generated in the `out/` directory.
 
 🤝 Community & Partnerships
 
