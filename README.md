@@ -15,15 +15,18 @@ Animated demo / hero GIF: ![demo-placeholder](./assets/demo.gif)  <!-- Replace w
 
 Why this repo matters
 - Deaf-first, accessibility-driven visualizer that transforms audio into visuals, haptics, and emotional color mapping.
-- Production-grade visual engine built on Three.js / WebGL and Web Audio APIs.
+- **New: Interactive Music Visualizer** - Experience music through colorful visual effects with customizable themes and settings.
+- Production-grade visual engine built on Web Audio API and Canvas animations.
 - Designed for rapid enterprise adoption — modular, documented, and ready for due diligence.
 
 Quick highlights
+- 🎵 Interactive music visualizer with real-time audio analysis
 - Real-time particle & shader-driven visuals
 - Emotion & frequency-aware color mapping
 - Mobile haptics + wearable-ready hooks
 - Sign-avatar overlay support for inclusive experiences
 - Browser-first: no install required (Next.js frontend)
+- User-controlled visual effects (enable/disable, adjust intensity & colors)
 
 Table of contents
 - Features
@@ -37,6 +40,12 @@ Table of contents
 - License & Business / Acquisition
 
 ## 🚀 Features
+- **🎵 Music Visualizer**: Transform audio into stunning visual effects with colorful animations
+  - Real-time frequency analysis and visual mapping
+  - Customizable color themes (Rainbow, PinkSync, Teal, Purple, Fire)
+  - Particle effects that respond to audio intensity
+  - Adjustable intensity and sensitivity settings
+  - Accessibility-first design for deaf/hard of hearing users
 - Upload or stream audio (MP3 / live input)
 - High-fidelity visual engine: Three.js, p5.js, custom GLSL shaders
 - Advanced audio analysis: Web Audio API + Tone.js
