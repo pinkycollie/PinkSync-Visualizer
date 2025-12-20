@@ -72,3 +72,76 @@ Add architecture diagram: ./docs/architecture.svg or ./docs/mbtq_architecture.ht
 
 ## 🔧 Environment (example)
 Create a .env.local at project root:
+
+
+(Replace with actual env vars used in codebase — update names if needed.)
+
+## 📦 Recommended Deploy
+One-click to Vercel:
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/pinkycollie/PinkSync-Visualizer)
+
+Pro tips:
+- Use edge functions for low-latency audio routing in production.
+- Serve optimized static assets (LZ4 compressed GLTF / texture atlases) for fast cold starts.
+
+## 🛣 Roadmap (acquisition-focused)
+- Q1: Harden API + explicit enterprise onboarding docs
+- Q2: Haptic SDK for Apple Watch & Android wearables
+- Q3: Live-stream integrations (Spotify, YouTube, Twitch)
+- Q4: Multi-user synchronized sessions & VR mode
+- Ongoing: Accessibility audits and privacy/compliance docs for enterprise buyers
+
+## 💼 Business / Acquisition Notes
+This repository is being prepared for acquisition. Current preparations include:
+- Clear, modular architecture and a single-purpose, audited codebase
+- Developer and onboarding documentation for fast due diligence
+- Demo-ready assets (demo GIFs, investor-ready deck available on request)
+- Contact for acquisition conversation: @pinkycollie (open to NDA / LOI discussions)
+
+If you're an investor or integrator and want an NDA'd walk-through or private branch access, open an issue or email contact@pinksync.example (replace with real contact).
+
+## 🤝 Contributing
+We welcome collaborators. To contribute:
+1. Fork the repo
+2. Create a branch: feat/your-feature
+3. Add tests and docs
+4. Open a PR referencing a related issue
+
+Please use Conventional Commits for commit messages (feat/fix/chore/docs/refactor).
+
+## 📜 Code of Conduct
+This project follows a Code of Conduct to maintain a welcoming, inclusive community. By participating, you agree to abide by it. See CODE_OF_CONDUCT.md.
+
+## 🔒 Security
+To report security vulnerabilities responsibly, please open a private security issue or contact security@pinksync.example (replace with real email). Do not disclose vulnerabilities in public issues.
+
+## 🧪 CI / Tests
+Add CI workflows for:
+- Linting (ESLint + Prettier)
+- Unit tests (Jest / Vitest)
+- Integration / visual regression tests (Playwright / Percy)
+Include badge here when CI is enabled:
+[![CI status](https://img.shields.io/badge/CI-not%20configured-lightgrey?style=for-the-badge)]()
+
+## 📚 Docs & Assets
+- User docs: ./docs/user-guide.md
+- Developer docs: ./docs/developer-guide.md
+- Architecture: ./docs/architecture.svg or ./docs/mbtq_architecture.html
+- Demo assets: ./assets/
+
+## 🙏 Acknowledgements & Partners
+- MBTQ.dev — Deaf-first ecosystem
+- VR4Deaf — wearable & immersive partner
+- Deaf creators & community partners
+
+## 📬 Contact
+- Repo: https://github.com/pinkycollie/PinkSync-Visualizer
+- Issues: https://github.com/pinkycollie/PinkSync-Visualizer/issues
+- Owner: @pinkycollie
+
+## ⚖️ License
+MIT — see LICENSE
+
+---
+
+Built to be felt, seen, and scaled. PinkSync — prepare to move audiences, devices, and markets.
