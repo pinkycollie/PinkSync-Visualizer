@@ -30,6 +30,10 @@ export class DeviceManager {
    * Check if vibration API is supported
    */
   private checkVibrationSupport(): boolean {
+    // Check if running in browser
+    if (typeof navigator === 'undefined') {
+      return false
+    }
     return 'vibrate' in navigator || 'mozVibrate' in navigator || 'webkitVibrate' in navigator
   }
 
@@ -37,6 +41,11 @@ export class DeviceManager {
    * Detect device type
    */
   private detectDeviceType(): 'phone' | 'watch' | 'wearable' | 'none' {
+    // Check if running in browser
+    if (typeof navigator === 'undefined') {
+      return 'none'
+    }
+    
     const ua = navigator.userAgent.toLowerCase()
     
     if (ua.includes('watch') || ua.includes('wearable')) {

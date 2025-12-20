@@ -1,12 +1,31 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "pinksync-visualizer",
+  "version": "1.0.0",
+  "description": "Deaf-First Music Visualizer - Feel the Beat, See the Sound",
+  "author": "PinkSync Team <support@pinksync.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pinkycollie/PinkSync-Visualizer.git"
+  },
+  "keywords": [
+    "music",
+    "visualizer",
+    "accessibility",
+    "deaf",
+    "haptic",
+    "three.js",
+    "web-audio",
+    "pwa",
+    "nextjs"
+  ],
   "private": true,
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
