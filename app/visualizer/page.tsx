@@ -1,3 +1,7 @@
+import PinkSyncMusicVisualizer from '@/components/pink-sync-music-visualizer';
+
+export default function VisualizerPage() {
+  return <PinkSyncMusicVisualizer />;
 "use client"
 
 import { useState } from "react"

@@ -1,3 +1,5 @@
+export function AccessibilityReports() {
+  return <div>Accessibility Reports - Coming Soon</div>;
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"

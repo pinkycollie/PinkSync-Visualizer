@@ -1,3 +1,5 @@
+export function CommunityFeed() {
+  return <div>Community Feed - Coming Soon</div>;
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"

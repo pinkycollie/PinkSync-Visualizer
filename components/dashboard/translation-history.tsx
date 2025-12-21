@@ -1,3 +1,5 @@
+export function TranslationHistory() {
+  return <div>Translation History - Coming Soon</div>;
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
