@@ -17,6 +17,7 @@ import {
   ArrowRight,
   Play,
   Star,
+  Music,
 } from "lucide-react"
 import Link from "next/link"
 import { useAuth } from "@/contexts/auth-context"
@@ -33,39 +34,40 @@ export default function HomePage() {
 
   const features = [
     {
+      icon: Music,
+      title: "Music Visualizer",
+      description: "Experience music through stunning visual effects - perfect for deaf users and music lovers",
+      color: "from-pink-500 to-purple-600",
+      href: "/visualizer",
+    },
+    {
       icon: Camera,
       title: "Sign Language Recognition",
       description: "AI-powered real-time sign language translation with 95%+ accuracy",
-      color: "from-pink-500 to-purple-600",
+      color: "from-teal-400 to-blue-500",
     },
     {
       icon: Users,
       title: "Interpreter Matching",
       description: "Connect with certified interpreters instantly using smart matching algorithms",
-      color: "from-teal-400 to-blue-500",
+      color: "from-purple-500 to-pink-500",
     },
     {
       icon: Accessibility,
       title: "Universal Overlay",
       description: "Make any website accessible with our intelligent accessibility overlay",
-      color: "from-purple-500 to-pink-500",
+      color: "from-green-400 to-teal-500",
     },
     {
       icon: Shield,
       title: "Biometric Security",
       description: "Secure authentication using sign language biometrics",
-      color: "from-green-400 to-teal-500",
+      color: "from-orange-400 to-red-500",
     },
     {
       icon: Globe,
       title: "Global Community",
       description: "Connect with deaf creators and accessibility professionals worldwide",
-      color: "from-orange-400 to-red-500",
-    },
-    {
-      icon: Zap,
-      title: "Developer APIs",
-      description: "Integrate deaf-accessible technology into your applications",
       color: "from-yellow-400 to-orange-500",
     },
   ]
@@ -90,6 +92,9 @@ export default function HomePage() {
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
+            <Link href="/visualizer" className="text-muted-foreground hover:text-primary transition-colors">
+              Visualizer
+            </Link>
             <Link href="/features" className="text-muted-foreground hover:text-primary transition-colors">
               Features
             </Link>
@@ -218,28 +223,33 @@ export default function HomePage() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
-            >
-              <Card className="h-full hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50">
-                <CardHeader>
-                  <div
-                    className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}
-                  >
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base leading-relaxed">{feature.description}</CardDescription>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+          {features.map((feature, index) => {
+            const CardWrapper = feature.href ? Link : "div"
+            return (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
+                transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
+              >
+                <CardWrapper href={feature.href || ""}>
+                  <Card className="h-full hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/50 cursor-pointer">
+                    <CardHeader>
+                      <div
+                        className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}
+                      >
+                        <feature.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <CardTitle className="text-xl">{feature.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-base leading-relaxed">{feature.description}</CardDescription>
+                    </CardContent>
+                  </Card>
+                </CardWrapper>
+              </motion.div>
+            )
+          })}
         </div>
       </section>
 

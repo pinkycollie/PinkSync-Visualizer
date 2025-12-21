@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { GeistSans } from "geist/font/sans"
 import "./globals.css"
 import { Providers } from "./providers"
 import { Toaster } from "@/components/ui/toaster"
@@ -50,6 +51,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icon-192.png" />
       </head>
       <body className="antialiased">
+      <body className="antialiased">
+      <body className={`${GeistSans.className} antialiased`}>
         <Providers>
           {children}
           <Toaster />
