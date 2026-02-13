@@ -1,5 +1,10 @@
 "use client"
 
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+export function CommunityFeed() {
+  return <div>Community Feed - Coming Soon</div>;
+"use client"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Globe } from "lucide-react"
 
@@ -7,6 +12,10 @@ export function CommunityFeed() {
   return (
     <Card>
       <CardHeader>
+        <CardTitle>Community Feed</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-muted-foreground">No posts yet</p>
         <CardTitle className="flex items-center gap-2">
           <Globe className="w-5 h-5" />
           Community Feed

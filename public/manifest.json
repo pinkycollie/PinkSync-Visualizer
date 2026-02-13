@@ -1,0 +1,72 @@
+{
+  "name": "PinkSync Music Visualizer",
+  "short_name": "PinkSync",
+  "description": "Deaf-First Music Visualizer - Feel the Beat, See the Sound",
+  "start_url": "/visualizer",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#FF10F0",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "music",
+    "entertainment",
+    "accessibility"
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-2.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "share_target": {
+    "action": "/visualizer",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "files": [
+        {
+          "name": "audio",
+          "accept": ["audio/*"]
+        }
+      ]
+    }
+  },
+  "shortcuts": [
+    {
+      "name": "Start Visualizer",
+      "short_name": "Visualize",
+      "description": "Open the music visualizer",
+      "url": "/visualizer",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "features": [
+    "Real-time 3D audio visualization",
+    "Haptic feedback for Deaf users",
+    "Multiple accessibility modes",
+    "Offline support",
+    "Share visualizations"
+  ]
+}
