@@ -1,5 +1,10 @@
 "use client"
 
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+export function InterpreterBookings() {
+  return <div>Interpreter Bookings - Coming Soon</div>;
+"use client"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Users } from "lucide-react"
 
@@ -7,6 +12,10 @@ export function InterpreterBookings() {
   return (
     <Card>
       <CardHeader>
+        <CardTitle>Interpreter Bookings</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-muted-foreground">No bookings yet</p>
         <CardTitle className="flex items-center gap-2">
           <Users className="w-5 h-5" />
           Interpreter Bookings
